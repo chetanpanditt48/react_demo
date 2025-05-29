@@ -1,8 +1,10 @@
 // src/App.js
-import React, { useState } from "react";
-import UserList from "./components/UserList.js";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from "./components/Navbar.js";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import UserList from "./components/usserList";
+
 const App = () => {
   return (
     <Router>
@@ -10,8 +12,8 @@ const App = () => {
         <Navbar />
         <main className="container mt-4">
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
-            <Route path="/" element={<UserList />} />
+            <Route path="/" element={<UserList/>} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
       </div>
